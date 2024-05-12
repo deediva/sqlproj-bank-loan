@@ -11,3 +11,7 @@ WHERE MONTH(issue_date) = 11 AND YEAR(issue_date) = 2021;
 
 -- TOTAL FUNDED AMOUNT
 SELECT SUM(loan_amount) AS Total_Funded_Amount from bank_loan_data;
+
+-- MTD(Month-To-Date)  FUNDED AMOUNT
+SELECT SUM(loan_amount) AS MTD_Total_Funded_Amount from bank_loan_data
+WHERE MONTH(issue_date) = 12 AND YEAR(issue_date) = 2021;
